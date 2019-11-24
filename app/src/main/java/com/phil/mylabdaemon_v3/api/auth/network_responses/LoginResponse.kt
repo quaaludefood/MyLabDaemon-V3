@@ -1,4 +1,4 @@
-package com.phil.mylabdaemon_v3.di.auth.network_responses
+package com.phil.mylabdaemon_v3.api.auth.network_responses
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

@@ -1,4 +1,4 @@
-package com.phil.mylabdaemon_v3.di.auth.network_responses
+package com.phil.mylabdaemon_v3.api.auth.network_responses
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
@@ -27,7 +27,8 @@ class RegistrationResponse(
 
     @SerializedName("token")
     @Expose
-    var token: String) {
+    var token: String)
+{
 
     override fun toString(): String {
         return "RegistrationResponse(response='$response', errorMessage='$errorMessage', email='$email', username='$username', token='$token')"

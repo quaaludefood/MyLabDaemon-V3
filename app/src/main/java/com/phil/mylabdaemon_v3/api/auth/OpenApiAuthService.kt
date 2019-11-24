@@ -1,8 +1,8 @@
 package com.phil.mylabdaemon_v3.api.auth
 
 import androidx.lifecycle.LiveData
-import com.phil.mylabdaemon_v3.di.auth.network_responses.LoginResponse
-import com.phil.mylabdaemon_v3.di.auth.network_responses.RegistrationResponse
+import com.phil.mylabdaemon_v3.api.auth.network_responses.LoginResponse
+import com.phil.mylabdaemon_v3.api.auth.network_responses.RegistrationResponse
 import com.phil.mylabdaemon_v3.util.GenericApiResponse
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
