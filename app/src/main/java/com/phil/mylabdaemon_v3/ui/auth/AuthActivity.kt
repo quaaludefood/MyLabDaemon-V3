@@ -8,11 +8,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.phil.mylabdaemon_v3.R
 import com.phil.mylabdaemon_v3.ui.BaseActivity
+import com.phil.mylabdaemon_v3.ui.ResponseType
 import com.phil.mylabdaemon_v3.ui.main.MainActivity
 import com.phil.mylabdaemon_v3.viewmodels.ViewModelProviderFactory
 import javax.inject.Inject
 
-class AuthActivity : BaseActivity() {
+class AuthActivity : BaseActivity(){
+
     @Inject
     lateinit var providerFactory: ViewModelProviderFactory
 
@@ -52,23 +54,5 @@ class AuthActivity : BaseActivity() {
         finish()
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

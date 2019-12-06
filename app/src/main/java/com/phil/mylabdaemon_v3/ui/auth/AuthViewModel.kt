@@ -19,15 +19,15 @@ constructor(
     override fun handleStateEvent(stateEvent: AuthStateEvent): LiveData<DataState<AuthViewState>> {
         when(stateEvent){
 
-            is AuthStateEvent.LoginAttemptEvent -> {
+            is LoginAttemptEvent -> {
                 return AbsentLiveData.create()
             }
 
-            is AuthStateEvent.RegisterAttemptEvent -> {
+            is RegisterAttemptEvent -> {
                 return AbsentLiveData.create()
             }
 
-            is AuthStateEvent.CheckPreviousAuthEvent -> {
+            is CheckPreviousAuthEvent -> {
                 return AbsentLiveData.create()
             }
 
@@ -66,35 +66,6 @@ constructor(
         _viewState.value = update
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

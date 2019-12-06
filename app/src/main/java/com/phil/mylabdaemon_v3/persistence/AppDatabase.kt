@@ -12,7 +12,7 @@ abstract class AppDatabase: RoomDatabase() {
     abstract fun getAccountPropertiesDao(): AccountPropertiesDao
 
     companion object {
-        const val DATABASE_NAME = "app_db"
+        val DATABASE_NAME: String = "app_db"
     }
 
 }

@@ -1,6 +1,4 @@
 package com.phil.mylabdaemon_v3.ui
-
-
 data class Loading(val isLoading: Boolean)
 data class Data<T>(val data: Event<T>?, val response: Event<Response>?)
 data class StateError(val response: Response)
@@ -16,6 +14,10 @@ sealed class ResponseType{
     class None: ResponseType()
 }
 
+
+/**
+ * Used as a wrapper for data that is exposed via a LiveData that represents an event.
+ */
 open class Event<out T>(private val content: T) {
 
     var hasBeenHandled = false

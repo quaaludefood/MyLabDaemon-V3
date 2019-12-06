@@ -1,5 +1,6 @@
 package com.phil.mylabdaemon_v3.persistence
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -9,16 +10,16 @@ import com.phil.mylabdaemon_v3.models.AccountProperties
 @Dao
 interface AccountPropertiesDao {
 
+    @Query("SELECT * FROM account_properties WHERE email = :email")
+    suspend fun searchByEmail(email: String): AccountProperties?
+
+    @Query("SELECT * FROM account_properties WHERE pk = :pk")
+    fun searchByPk(pk: Int): LiveData<AccountProperties>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAndReplace(accountProperties: AccountProperties):Long
+    fun insertAndReplace(accountProperties: AccountProperties): Long
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insertOrIgnore(accountProperties: AccountProperties):Long
-
-    @Query("SELECT * from account_properties where pk = :pk")
-    fun searchByPk(pk: Int): AccountProperties?
-
-    @Query("SELECT * from account_properties where email = :email")
-    fun searchByPk(email: String): AccountProperties?
+    fun insertOrIgnore(accountProperties: AccountProperties): Long
 
 }

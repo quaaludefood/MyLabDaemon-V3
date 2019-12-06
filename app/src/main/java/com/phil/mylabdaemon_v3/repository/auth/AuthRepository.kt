@@ -1,5 +1,4 @@
 package com.phil.mylabdaemon_v3.repository.auth
-
 import androidx.lifecycle.LiveData
 import com.phil.mylabdaemon_v3.api.auth.OpenApiAuthService
 import com.phil.mylabdaemon_v3.api.auth.network_responses.LoginResponse
@@ -15,9 +14,8 @@ class AuthRepository
 constructor(
     val authTokenDao: AuthTokenDao,
     val accountPropertiesDao: AccountPropertiesDao,
-    val  openApiAuthService: OpenApiAuthService,
-    val  sessionManager: SessionManager
-
+    val openApiAuthService: OpenApiAuthService,
+    val sessionManager: SessionManager
 )
 {
 
@@ -35,6 +33,7 @@ constructor(
         return openApiAuthService.register(email, username, password, confirmPassword)
     }
 }
+
 
 
 

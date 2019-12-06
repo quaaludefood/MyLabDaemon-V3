@@ -24,6 +24,6 @@ class ForgotPasswordFragment : BaseAuthFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.d(TAG, "ForgotPasswordFragment: ${viewModel.hashCode()}")
+        Log.d(TAG, "ForgotPasswordFragment: ${viewModel}")
     }
 }

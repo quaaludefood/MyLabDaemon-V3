@@ -17,22 +17,20 @@ abstract class BaseViewModel<StateEvent, ViewState> : ViewModel() {
         get() = _viewState
 
     val dataState: LiveData<DataState<ViewState>> = Transformations
-        .switchMap(_stateEvent) { stateEvent ->
+        .switchMap(_stateEvent){stateEvent ->
             stateEvent?.let {
                 handleStateEvent(stateEvent)
             }
         }
 
-    fun setStateEvent(event: StateEvent) {
-        val state: StateEvent
-        state = event
-        _stateEvent.value = state
+    fun setStateEvent(event: StateEvent){
+        _stateEvent.value = event
     }
 
-    fun getCurrentViewStateOrNew(): ViewState {
-        val value = viewState.value?.let {
+    fun getCurrentViewStateOrNew(): ViewState{
+        val value = viewState.value?.let{
             it
-        } ?: initNewViewState()
+        }?: initNewViewState()
         return value
     }
 

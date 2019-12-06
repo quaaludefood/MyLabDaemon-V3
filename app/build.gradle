@@ -18,8 +18,7 @@ android {
             annotationProcessorOptions {
                 arguments = [
                         "room.schemaLocation": "$projectDir/schemas".toString(),
-                       // "room.incremental"   : "true"
-                ]
+                        "room.incremental"   : "true"]
             }
         }
 

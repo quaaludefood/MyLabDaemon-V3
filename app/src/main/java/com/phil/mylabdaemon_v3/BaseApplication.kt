@@ -2,7 +2,7 @@ package com.phil.mylabdaemon_v3
 
 import com.phil.mylabdaemon_v3.di.DaggerAppComponent
 import dagger.android.AndroidInjector
-import dagger.android.DaggerApplication
+import dagger.android.support.DaggerApplication
 
 class BaseApplication: DaggerApplication() {
 
